@@ -1,0 +1,22 @@
+{
+  "name": "writting.club",
+  "description": "A writting club webpage",
+  "main": "index.js",
+  "authors": [
+    "afk"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "writting",
+    "club"
+  ],
+  "homepage": "https://github.com/Arlefreak/writting.club",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
