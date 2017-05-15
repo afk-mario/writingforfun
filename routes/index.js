@@ -1,3 +1,8 @@
 exports.index = (req, res) => {
-  res.render('home', {});
+  const context = {
+    title: 'writting',
+    description: 'description',
+    preview: 'img/preview.png',
+  };
+  res.render('home', context);
 };
