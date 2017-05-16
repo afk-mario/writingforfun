@@ -7,6 +7,7 @@ django-storages==1.5.2
 django-uuslug==1.1.8
 greenlet==0.4.12
 gunicorn==19.7.1
+Markdown==2.6.8
 msgpack-python==0.4.8
 neovim==0.1.13
 packaging==16.8
