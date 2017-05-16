@@ -1,17 +1,18 @@
 {% extends "base.html" %}
+{% load markdown_filter %}
 
 {% block content %}
 
 <main>
     <div class="wrapper">
-        <div class="markdown">
+        <div>
             <h2>{{ post.title }}</h2>
-            <section>
-                {{ post.text | safe }}
+            <section class="markdown">
+                {{ post.text | markdownify | safe }}
             </section>
-            <span>
+            <p>
                 Written by {{ post.author }}  on {{ post.date_created | date }}
-            </span>
+            </p>
         </div>
     </div>
 </main>

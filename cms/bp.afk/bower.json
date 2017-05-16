@@ -1,5 +1,5 @@
 {
-  "name": "writing for fun",
+  "name": "writtingforfun",
   "description": "A writing club webpage",
   "main": "index.js",
   "authors": [
@@ -18,5 +18,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "simplemde": "^1.11.2"
+  }
 }
