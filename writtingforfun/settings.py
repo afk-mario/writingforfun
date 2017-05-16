@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'adminsortable',
-    'writting',
+    'cms',
 ]
 
 MIDDLEWARE = [
@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'writting_club.urls'
+ROOT_URLCONF = 'writtingforfun.urls'
 
 TEMPLATES = [
     {
@@ -58,7 +58,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'writting_club.wsgi.application'
+WSGI_APPLICATION = 'writtingforfun.wsgi.application'
 
 DATABASES = {
     'default': {
