@@ -1,5 +1,5 @@
 {
-  "name": "writting.club",
+  "name": "writting for fun",
   "description": "A writting club webpage",
   "main": "index.js",
   "authors": [
@@ -10,7 +10,7 @@
     "writting",
     "club"
   ],
-  "homepage": "https://github.com/Arlefreak/writting.club",
+  "homepage": "https://github.com/Arlefreak/writtingforfun",
   "private": true,
   "ignore": [
     "**/.*",
