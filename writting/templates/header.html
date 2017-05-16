@@ -1,5 +1,17 @@
 <header>
-    <a href="{% url 'article-list' %}">
-        <h1>Writting.club</h1>
-    </a>
+    <div class="wrapper">
+        <a href="{% url 'article-list' %}">
+            <h1>Writing.club</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'add_post' %}">Add</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">log out</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">log in</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
 </header>

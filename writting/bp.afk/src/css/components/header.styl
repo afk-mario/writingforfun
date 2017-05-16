@@ -1,19 +1,29 @@
 header
-    max-width 600px
     width 100%
-    margin 20px auto 20px auto
-    box-sizing border-box
+    height 100px
+    .wrapper
+        height 100%
+        display flex
+        flex-flow row wrap
+        justify-content space-between
+    a
+        display flex
+        height 100%
+        align-items center
+        justify-content flex-start
     h1
-        width 70%
-        max-width 1024px
-        margin auto
-        display inline-block
-        text-align left
-        font-size 3.0em
+        width 20%
+        margin 0
+        display flex
+        font-size 2.0em
         font-weight 700
-    img
-        width 10%
-        max-width 150px
-        height auto
-        display inline-block
-
+    nav
+        display flex
+        ul
+            display flex
+            align-items center
+            justify-content center
+            li
+                margin 0 10px 0 0
+                &:last-child
+                    margin 0

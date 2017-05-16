@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Hello {{ user.username }}</h2>
-<br />
-<h2>Add new post</h2>
-<form action="" method="POST">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <input type="submit" name="add" value="Add" />
-</form>
+<main>
+    <div class="wrapper">
+        <h2>Hello {{ user.username }}</h2>
+        <h3>Add new post</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="add" value="Add" />
+        </form>
+    </div>
+</main>
 {% endblock %}

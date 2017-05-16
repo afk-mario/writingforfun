@@ -6,9 +6,9 @@
     <div class="wrapper">
         <div class="markdown">
             <h2>{{ post.title }}</h2>
-            <p>
-                {{ post.text }}
-            </p>
+            <section>
+                {{ post.text | safe }}
+            </section>
             <span>
                 Written by {{ post.author }}  on {{ post.date_created | date }}
             </span>

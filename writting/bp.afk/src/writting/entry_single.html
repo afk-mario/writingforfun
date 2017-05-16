@@ -3,16 +3,24 @@
 {% block content %}
 <main>
     <div class="wrapper">
-        <h2>{{ object.headline }}</h2>
-        <section class="markdown">
+        <h2>{{ object.title }}</h2>
+        <section>
             <p>{{ object.text }}</p>
             <p>Published: {{ object.date_created|date }}</p>
 
-            <ul>
+            <ul class="full-width grid square-list">
                 {% for item in object_list %}
-                <li>
+                <li class="grid-cell">
                     <a href="{% url 'post_detail' item.slug %}">
-                        {{ item.date_created|date }} - {{ item.title }} - {{ item.author }}
+                        <span class="title">
+                            {{ item.title }}
+                        </span>
+                        <span class="author">
+                            {{ item.author }}
+                        </span>
+                        <span class="date">
+                            {{ item.date_created|date }} 
+                        </span>
                     </a>
                 </li>
                 {% empty %}

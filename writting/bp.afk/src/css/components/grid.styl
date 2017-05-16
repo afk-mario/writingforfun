@@ -1,0 +1,55 @@
+$grid-margin-top = 2%
+$grid-margin-right = 1%
+$grid-margin-bottom = 0
+$grid-margin-left = 1%
+$grid-reset-selectors = '&:nth-child(2n), &:nth-child(2n-9), &:nth-child(3n), &:nth-child(3n-8), &:nth-child(4n), &:nth-child(4n-7), &:nth-child(5n), &:nth-child(5n-4)'
+$margin = $grid-margin-top $grid-margin-right $grid-margin-bottom $grid-margin-left
+
+calcWidth(n)
+    w = 100% / n
+    w -= $grid-margin-right
+    w -= $grid-margin-left
+    w += ($grid-margin-right + $grid-margin-left) / n
+
+$grid-2-width = calcWidth(2)
+$grid-3-width = calcWidth(3)
+$grid-4-width = calcWidth(4)
+$grid-5-width = calcWidth(5)
+$grid-6-width = calcWidth(6)
+
+.grid
+    display block
+    width 100%
+
+.grid-cell
+    display block
+    float left
+    height auto
+    display block
+
+.full-width
+    .grid-cell
+        margin $margin
+        width $grid-6-width
+        {$grid-reset-selectors}
+            margin $margin
+        &:nth-child(6n)
+            margin-right 0
+        &:nth-child(6n-5)
+            margin-left 0
+        @media screen and (max-width: $mobile-width)
+            width $grid-4-width
+            {$grid-reset-selectors}
+                margin $margin
+            &:nth-child(4n)
+                margin-right 0
+            &:nth-child(4n-3)
+                margin-left 0
+.half-width
+    .grid-cell
+        margin $margin
+        width $grid-4-width
+        &:nth-child(4n)
+            margin-right 0
+        &:nth-child(4n-3)
+            margin-left 0

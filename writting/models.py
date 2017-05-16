@@ -1,8 +1,9 @@
 from django.db import models
-from django.template.defaultfilters import slugify
+from django.urls import reverse
+from uuslug import uuslug
 from django.contrib.auth.models import User
 from adminsortable.models import SortableMixin
-from  adminsortable.fields import SortableForeignKey
+from adminsortable.fields import SortableForeignKey
 
 class Entry(SortableMixin):
     order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
@@ -20,8 +21,7 @@ class Entry(SortableMixin):
     def __str__(self):
         return self.title
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
+        self.slug = uuslug(self.title, instance=self)
         super(Entry, self).save(*args, **kwargs)
 
 class Post(SortableMixin):
@@ -39,6 +39,7 @@ class Post(SortableMixin):
     def __str__(self):
         return self.title
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
+        self.slug = uuslug(self.title, instance=self)
         super(Post, self).save(*args, **kwargs)
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.slug)])

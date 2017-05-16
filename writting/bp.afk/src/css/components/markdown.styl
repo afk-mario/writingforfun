@@ -1,7 +1,7 @@
 .markdown
     max-width $max-text-width
     &>:first-child
-        margin-top 20px
+        margin-top 0px
     &>:last-child
         margin-bottom 0px
     &.no-margin
@@ -74,7 +74,7 @@
     code
         font-size 0.9em
         padding 0 0.5em
-        background-color #f1f1f1
+        background-color $gray3
         white-space pre-wrap
     img
         width 100%
@@ -83,24 +83,10 @@
         margin auto
         box-sizing border-box
     a
-        color $color1
+        color $highlight-yellow
         box-sizing border-box
         position relative
-        background $gray1
         z-index 2
-        &::before
-            width 0%
-            height 100%
-            z-index -1
-            background $gray1
-            content ""
-            position absolute
-            bottom 0
-            transition all 0.2s ease
         &:hover
         &.active
-            color $color1
-            &::before
-                width 100%
-                background $highlight-soft
-
+            color $highlight
