@@ -5,7 +5,7 @@ from .models import Post
 from .views import *
 
 urlpatterns = [
-    url(r'^test/$', test_mail, name='mail'),
+    # url(r'^test/$', test_mail, name='mail'),
     url(r'^register/$', Register, name='register'),
     url(r'^login/$', auth_views.LoginView.as_view(), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
