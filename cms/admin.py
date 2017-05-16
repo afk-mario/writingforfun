@@ -9,3 +9,7 @@ class ProductAdmin(SortableAdmin):
 @admin.register(Post)
 class ProductAdmin(SortableAdmin):
     pass
+
+@admin.register(Profile)
+class ProductAdmin(SortableAdmin):
+    pass

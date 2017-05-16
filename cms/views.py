@@ -81,7 +81,7 @@ class EntryDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(EntryDetailView, self).get_context_data(**kwargs)
-        context['object_list'] = Post.objects.all()
+        context['object_list'] = Post.objects.filter(entry=self.object)
         return context
 
 @login_required
