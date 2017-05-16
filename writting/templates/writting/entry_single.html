@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <div class="wrapper">
+        <h2>{{ object.headline }}</h2>
+        <section class="markdown">
+            <p>{{ object.text }}</p>
+            <p>Published: {{ object.date_created|date }}</p>
+
+            <ul>
+                {% for item in object_list %}
+                <li>
+                    <a href="{% url 'post_detail' item.slug %}">
+                        {{ item.date_created|date }} - {{ item.title }} - {{ item.author }}
+                    </a>
+                </li>
+                {% empty %}
+                <li>No articles yet.</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</main>
+{% endblock %}

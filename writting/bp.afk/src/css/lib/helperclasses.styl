@@ -1,0 +1,76 @@
+.ir
+	background-color transparent
+	border 0
+	overflow hidden
+	text-indent -9999px
+
+.irbefore
+	content ""
+	display block
+	width 0
+	height 150%
+
+.hidden
+	display none!important
+	visibility hidden
+
+.visuallyhidden
+	border 0
+	clip rect(0000)
+	height 1px
+	overflow hidden
+	position absolute
+	width 1px
+	margin -1px
+	padding 0
+
+.visuallyhidden.focusableactive
+.visuallyhidden.focusablefocus
+	clip auto
+	height auto
+	overflow visible
+	position static
+	width auto
+	margin 0
+
+.invisible
+	visibility hidden
+
+.clearfixbefore
+.clearfixafter
+	content " "
+	display table
+
+.clearfixafter
+	clear both
+
+.clearfix
+	zoom 1
+
+.flag
+	display table
+	width 100%
+
+.flag__image
+.flag__body
+	display table-cell
+	vertical-align middle
+
+.flag--top &
+	vertical-align top
+
+.flag--bottom &
+	vertical-align bottom
+
+.flag__image
+	padding-right 10px
+	img
+	display block
+	max-width none
+
+.flag--rev &
+	padding-right 0
+	padding-left 10px
+
+.flag__body
+	width 100%

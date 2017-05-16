@@ -17,7 +17,7 @@ class Entry(SortableMixin):
     class Meta:
         ordering  = ['order', 'slug']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -36,7 +36,7 @@ class Post(SortableMixin):
     class Meta:
         ordering  = ['order', 'slug']
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
     def save(self, *args, **kwargs):
         if not self.slug:

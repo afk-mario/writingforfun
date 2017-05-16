@@ -1,0 +1,110 @@
+.wrapper
+    width calc(100% - 175px)
+    height auto
+    display block
+    margin auto
+    @media screen and (max-width: $mobile-width)
+        width 80%
+.hideMobile
+    @media screen and (max-width: $mobile-width)
+        display none !important
+
+main
+    overflow hidden
+    margin 0 0 90px 0
+    @media screen and (max-width: $mobile-width)
+        margin 0 0 calc(5vh + 10px) 0
+h1
+h2
+h3
+    display block
+    @media screen and (max-width: $mobile-width)
+        width 100%
+h1
+    font-size 1.8em
+    font-weight 700
+    text-align center
+    &.center
+        margin 25vh auto 0 auto
+h2
+    font-size 1.5em
+    font-weight 700
+    margin 0 0 10px 0
+    border-bottom 1px solid
+    min-height 40px
+    padding 0 0 10px 0
+    box-sizing border-box
+h3
+    font-size 1.4em
+    margin 20px 0 20px 0
+    font-weight 700
+h4
+    font-size 1.1em
+    margin 20px 0 20px 0
+    font-weight 700
+p
+    font-size 1em
+    font-weight 400
+    line-height 1.8em
+    margin 0 0 25px 0
+    @media screen and (max-width: $mobile-width)
+        width 100%
+        font-size 0.8em
+        line-height 1.6em
+a
+    color $black
+    text-decoration none
+    transition all 0.2s ease
+    &:hover
+        color $highlight-pink
+em
+    color $gray5
+    font-style italic
+    font-weight 400
+strong
+    font-style italic
+    font-weight 700
+pre
+    font-family $fontCode
+.index
+.icono
+    display block
+    width 8vw
+    height auto
+    position fixed
+    right 1.5vw
+    z-index 20
+    max-width 50px
+.icono
+    bottom 1.5vw
+.index
+    top 1.5vw
+article
+    min-height 70vh
+    box-sizing border-box
+    margin 1.5vh 0 1.5vh 0
+    overflow hidden
+.center
+    text-align center
+    margin auto
+a.center
+    display block
+    width 100%
+    margin 20vh 0 0 0
+.date-container
+    margin 0 0 10px 0
+.date
+    font-weight 100
+    font-size 0.8em
+    display inline-block
+    margin 0 10px 0 0
+.sticky
+    z-index 1000
+.margin
+    display block
+    width 100%
+    height 20px
+    background transparent
+ul
+    width 100%
+    padding 0

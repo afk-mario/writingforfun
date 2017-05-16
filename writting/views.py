@@ -1,9 +1,28 @@
 from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import redirect, render, get_object_or_404
 from django.template import RequestContext
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
-from .models import Post
+from .models import Post, Entry
 from .forms import PostForm
+
+class EntryListView(ListView):
+    model = Entry
+    template_name = 'writting/entry_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(EntryListView, self).get_context_data(**kwargs)
+        return context
+
+class EntryDetailView(DetailView):
+    model = Entry
+    template_name = 'writting/entry_single.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(EntryDetailView, self).get_context_data(**kwargs)
+        context['object_list'] = Post.objects.all()
+        return context
 
 @user_passes_test(lambda u: u.is_superuser)
 def add_post(request):

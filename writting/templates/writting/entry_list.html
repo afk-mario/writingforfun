@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <div class="wrapper">
+        <h2>Articles</h2>
+        <ul>
+            {% for item in object_list %}
+            <li>
+                <a href="{% url 'article-detail' item.slug %}">
+                    {{ item.date_created|date }} - {{ item.title }}
+                </a>
+            </li>
+            {% empty %}
+            <li>No articles yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</main>
+{% endblock %}
