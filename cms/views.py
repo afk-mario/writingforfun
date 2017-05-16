@@ -10,10 +10,22 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
 
 from .models import Post, Entry
 from .forms import PostForm, RegisterForm
 from .tokens import account_activation_token
+
+def test_mail(request):
+    send_mail(
+        'Subject here',
+        'Here is the message.',
+        'hi@arlefreak.com',
+        ['arlefreak@gmail.com'],
+        fail_silently=False,
+    )
+    return redirect('home')
+
 
 def account_activation_sent(request):
     return redirect('home')
