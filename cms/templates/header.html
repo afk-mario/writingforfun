@@ -1,14 +1,16 @@
 <header>
     <div class="wrapper">
-        <a href="{% url 'article-list' %}">
+        <a href="{% url 'home' %}">
             <h1>writing for fun</h1>
         </a>
         <nav>
             <ul>
-                <li><a href="{% url 'add_post' %}">Add</a></li>
                 {% if user.is_authenticated %}
+                <li><a href="{% url 'add_post' %}">Add</a></li>
+                <li><a href="{% url 'home' %}">{{ user.username }}</a></li>
                 <li><a href="{% url 'logout' %}">log out</a></li>
                 {% else %}
+                <li><a href="{% url 'register' %}">register</a></li>
                 <li><a href="{% url 'login' %}">log in</a></li>
                 {% endif %}
             </ul>

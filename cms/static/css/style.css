@@ -879,6 +879,11 @@ header nav ul li:last-child {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  color: #2a2c05;
+}
+.square-list a.active,
+.square-list a:hover {
+  color: #ec008c;
 }
 .square-list .date,
 .square-list .title,

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block header-refs %}
-<link rel="stylesheet" href="{% static "lib/css/simplemde.min.css" %}">
 {% endblock %}
 
 {% block content %}
@@ -18,8 +17,4 @@
 </main>
 {% endblock %}
 {% block footer-refs %}
-<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-<script>
-    var simplemde = new SimpleMDE();
-</script>
 {% endblock %}

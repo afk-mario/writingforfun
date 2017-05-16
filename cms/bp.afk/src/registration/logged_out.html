@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <div class="wrapper">
+        {% if error_message %}
+        <p class="errornote">{{ error_message }}</p>
+        {% endif %}
+        <div id="content-main">
+            <h2>Logged Out</h2>
+            <a href="{% url 'home' %}">Go back</a>
+        </div>
+    </div>
+</main>
+{% endblock %}
