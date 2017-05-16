@@ -2,9 +2,12 @@ Django==1.11.1
 django-admin-sortable==2.1
 django-environ==0.4.3
 django-storages==1.5.2
+django-uuslug==1.1.8
 greenlet==0.4.12
 msgpack-python==0.4.8
 neovim==0.1.13
 psycopg2==2.7.1
+python-slugify==1.2.4
 pytz==2017.2
 six==1.10.0
+Unidecode==0.4.20
