@@ -9,7 +9,7 @@ from .forms import PostForm
 
 class EntryListView(ListView):
     model = Entry
-    template_name = 'writting/entry_list.html'
+    template_name = 'writing/entry_list.html'
 
     def get_context_data(self, **kwargs):
         context = super(EntryListView, self).get_context_data(**kwargs)
@@ -17,7 +17,7 @@ class EntryListView(ListView):
 
 class EntryDetailView(DetailView):
     model = Entry
-    template_name = 'writting/entry_single.html'
+    template_name = 'writing/entry_single.html'
 
     def get_context_data(self, **kwargs):
         context = super(EntryDetailView, self).get_context_data(**kwargs)
@@ -32,12 +32,12 @@ def add_post(request):
         post.author = request.user
         post.save()
         return redirect(post)
-    return render(request, 'writting/add_post.html', 
+    return render(request, 'writing/add_post.html', 
                               { 'form': form })
 
 def view_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    return render(request, 'writting/blog_post.html',
+    return render(request, 'writing/post_single.html',
                               {
                                   'post': post,
                               })

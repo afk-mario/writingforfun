@@ -1,22 +1,22 @@
 {
-  "name": "writting for fun",
+  "name": "writing for fun",
   "version": "1.0.0",
-  "description": "A writting club webpage",
+  "description": "A writing club webpage",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
   },
-  "repository": "git+https://github.com/Arlefreak/writtingforfun.git",
+  "repository": "git+https://github.com/Arlefreak/writingforfun.git",
   "keywords": [
-    "writting",
+    "writing",
     "club"
   ],
   "author": "afk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Arlefreak/writtingforfun/issues"
+    "url": "https://github.com/Arlefreak/writingforfun/issues"
   },
-  "homepage": "https://github.com/Arlefreak/writtingforfun#readme",
+  "homepage": "https://github.com/Arlefreak/writingforfun#readme",
   "dependencies": {
     "gulp-clean-css": "^3.3.0"
   },

@@ -1,16 +1,16 @@
 {
-  "name": "writting for fun",
-  "description": "A writting club webpage",
+  "name": "writing for fun",
+  "description": "A writing club webpage",
   "main": "index.js",
   "authors": [
     "afk"
   ],
   "license": "MIT",
   "keywords": [
-    "writting",
+    "writing",
     "club"
   ],
-  "homepage": "https://github.com/Arlefreak/writtingforfun",
+  "homepage": "https://github.com/Arlefreak/writingforfun",
   "private": true,
   "ignore": [
     "**/.*",

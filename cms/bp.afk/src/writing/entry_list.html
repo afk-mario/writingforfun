@@ -3,7 +3,7 @@
 {% block content %}
 <main>
     <div class="wrapper">
-        <ul class="grid square-list">
+        <ul class="full-width grid square-list">
             {% for item in object_list %}
             <li class="grid-cell">
                 <a href="{% url 'article-detail' item.slug %}">

@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'writtingforfun.urls'
+ROOT_URLCONF = 'writingforfun.urls'
 
 TEMPLATES = [
     {
@@ -58,7 +58,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'writtingforfun.wsgi.application'
+WSGI_APPLICATION = 'writingforfun.wsgi.application'
 
 DATABASES = {
     'default': {

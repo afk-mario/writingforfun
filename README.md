@@ -1,2 +1,2 @@
-# writting for fun
-A writting club webpage 
+# writing for fun
+A writing club webpage 
